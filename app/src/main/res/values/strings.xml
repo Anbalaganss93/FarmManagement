@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FarmManagement</string>
+    <string name="fab_content_desc">create pond</string>
+    <string name="pincode">Enter Pincode</string>
+    <string name="farm_address">Enter Farm Address</string>
+    <string name="farm_name">Enter Farm Name</string>
+    <string name="user_name">Enter User Name</string>
+    <string name="mobile_number">Enter mobile number</string>
+    <string name="login">Login</string>
+</resources>

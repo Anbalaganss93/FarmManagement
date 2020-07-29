@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginEnd="@dimen/dimen_15"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/dimen_15"
+            android:paddingEnd="@dimen/dimen_15"
+            android:paddingBottom="@dimen/dimen_15">
+
+            <ImageView
+                android:id="@+id/pondImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:src="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/pondName"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintWidth_percent="0.6" />
+
+            <com.farmmanagement.utils.customview.MyTextView
+                android:id="@+id/pondName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginEnd="8dp"
+                android:text=""
+                android:textColor="@color/appfontcolor1"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintBottom_toTopOf="@id/pondSize"
+                app:layout_constraintEnd_toStartOf="@+id/update"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pondImg" />
+
+            <com.farmmanagement.utils.customview.MyTextView
+                android:id="@+id/pondSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginEnd="8dp"
+                android:text=""
+                android:textColor="@color/appfontcolor1"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toStartOf="@+id/update"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pondName"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/pondSize"
+                app:layout_constraintEnd_toStartOf="@+id/delete"
+                app:layout_constraintTop_toTopOf="@+id/pondName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="@+id/pondSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pondName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

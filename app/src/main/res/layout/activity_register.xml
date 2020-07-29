@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".registerpage.RegisterActivity">
+
+            <RelativeLayout
+                android:id="@+id/registerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#2196F3"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dimen_10"
+                    android:src="@drawable/ic_back" />
+
+                <com.farmmanagement.utils.customview.MyTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Registration"
+                    android:textColor="@color/title_font_color"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/backgroundImg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.25"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_mobile_auth"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerHeader" />
+
+            <com.farmmanagement.utils.customview.MyEditText
+                android:id="@+id/mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/dimen_20"
+                android:background="@drawable/editextbg"
+                android:gravity="start"
+                app:layout_constraintVertical_bias="0.3"
+                android:hint="@string/mobile_number"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/appfontcolor1"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toTopOf="@id/userName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerHeader"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.farmmanagement.utils.customview.MyEditText
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/editextbg"
+                android:gravity="start"
+                android:hint="@string/user_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/appfontcolor1"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toTopOf="@id/farmName"
+                app:layout_constraintEnd_toEndOf="@id/mobilenumber"
+                app:layout_constraintStart_toStartOf="@id/mobilenumber"
+                app:layout_constraintTop_toBottomOf="@id/mobilenumber" />
+
+            <com.farmmanagement.utils.customview.MyEditText
+                android:id="@+id/farmName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/editextbg"
+                android:gravity="start"
+                android:hint="@string/farm_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/appfontcolor1"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toTopOf="@id/farmAddress"
+                app:layout_constraintEnd_toEndOf="@id/mobilenumber"
+                app:layout_constraintStart_toStartOf="@id/mobilenumber"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+            <com.farmmanagement.utils.customview.MyEditText
+                android:id="@+id/farmAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/editextbg"
+                android:gravity="start"
+                android:hint="@string/farm_address"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:minHeight="90dp"
+                android:singleLine="false"
+                android:textColor="@color/appfontcolor1"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toTopOf="@id/pinCode"
+                app:layout_constraintEnd_toEndOf="@id/mobilenumber"
+                app:layout_constraintStart_toStartOf="@id/mobilenumber"
+                app:layout_constraintTop_toBottomOf="@id/farmName" />
+
+            <com.farmmanagement.utils.customview.MyEditText
+                android:id="@+id/pinCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/editextbg"
+                android:gravity="start"
+                android:hint="@string/pincode"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="@color/appfontcolor1"
+                android:textColorHint="@color/hintcolor"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toTopOf="@id/submit"
+                app:layout_constraintEnd_toEndOf="@id/mobilenumber"
+                app:layout_constraintStart_toStartOf="@id/mobilenumber"
+                app:layout_constraintTop_toBottomOf="@id/farmAddress" />
+
+
+            <com.farmmanagement.utils.customview.MyButton
+                android:id="@+id/submit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/round_corner_button"
+                android:fontFamily="@font/nunito"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_18"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mobilenumber"
+                app:layout_constraintStart_toStartOf="@+id/mobilenumber"
+                app:layout_constraintTop_toBottomOf="@id/pinCode"
+                app:layout_constraintWidth_percent="0.4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

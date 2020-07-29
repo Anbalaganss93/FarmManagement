@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".registerpage.RegisterActivity">
+
+
+        <LinearLayout
+            android:id="@+id/loginHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="#2196F3"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.farmmanagement.utils.customview.MyTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nunito"
+                android:gravity="center"
+                android:text="Login"
+                android:textColor="@color/title_font_color"
+                android:textSize="@dimen/font_18" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/backgroundImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.45"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_mobile_auth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginHeader" />
+
+        <EditText
+            android:id="@+id/mobilenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:background="@drawable/editextbg"
+            android:gravity="center"
+            android:hint="@string/mobile_number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/appfontcolor1"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBottom_toTopOf="@id/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginHeader"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <com.farmmanagement.utils.customview.MyButton
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/round_corner_button"
+            android:fontFamily="@font/nunito"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/register"
+            app:layout_constraintEnd_toEndOf="@+id/mobilenumber"
+            app:layout_constraintStart_toStartOf="@+id/mobilenumber"
+            app:layout_constraintTop_toBottomOf="@id/mobilenumber"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <com.farmmanagement.utils.customview.MyTextViewBold
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5"
+            android:text="Register"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/mobilenumber"
+            app:layout_constraintStart_toStartOf="@id/mobilenumber"
+            app:layout_constraintTop_toBottomOf="@id/login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
